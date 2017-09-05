@@ -1,0 +1,96 @@
+div {
+  color: white;
+}
+
+.start,
+.reset {
+  background: black;
+  display: inline-block;
+  padding: 10px;
+}
+
+.css,
+.jquery {
+  display: inline-block;
+  margin: 50px;
+}
+
+.jquery {
+  position: relative;
+}
+
+.transparent {
+  background: red;
+  height: 100px;
+  width: 100px;
+}
+
+.rotate {
+  background: green;
+  height: 100px;
+  width: 100px;
+}
+
+.scale {
+  background: blue;
+  height: 100px;
+  width: 100px;
+}
+
+.translate {
+  background: orange;
+  height: 100px;
+  width: 100px;
+}
+
+.css-transparent.animation {
+  animation: transparent 3s;
+}
+
+.css-rotate.animation {
+  animation: rotate 3s;
+}
+
+.css-scale.animation {
+  animation: scale 3s;
+}
+
+.css-translate.animation {
+  animation: translate 3s;
+}
+
+@keyframes transparent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}

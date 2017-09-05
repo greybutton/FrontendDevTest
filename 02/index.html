@@ -1,26 +1,71 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title></title>
-    <link href="css/main.css" rel="stylesheet">>
-</head>
-<body>
-    <div id="background">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title></title>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="background">
+    <div class="css">
+      <div class="start css-start">CSS start</div>
+      <div class="reset css-reset">CSS reset</div>
+      <div class="transparent css-transparent">transparent</div>
+      <div class="rotate css-rotate">rotate</div>
+      <div class="scale css-scale">scale</div>
+      <div class="translate css-translate">translate</div>
     </div>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script>
-        $(function () {
-           
+    <div class="jquery">
+      <div class="start jquery-start">jQuery start</div>
+      <div class="reset jquery-reset">jQuery reset</div>
+      <div class="transparent jquery-transparent">transparent</div>
+      <div class="rotate jquery-rotate">rotate</div>
+      <div class="scale jquery-scale">scale</div>
+      <div class="translate jquery-translate">translate</div>
+    </div>
+  </div>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script>
+    $(function () {
+      $('.css-start').click(function () {
+        $('.css .transparent, .css .rotate, .css .scale, .css .translate').toggleClass('animation');
+      });
+      $('.css-reset').click(function () {
+        $('.css div').removeClass('animation');
+      });
+      $('.jquery-start').click(function () {
+        $('.jquery-transparent').animate({
+          opacity: 0
+        }, { duration: 500 });
+        $('.jquery-rotate').css({ transform: 'rotate(360deg)', transition: 'all 3s' });
+        $('.jquery-scale').animate({
+          width: '150px',
+          height: '150px'
         });
-    </script>
+        $('.jquery-translate').animate({
+          marginLeft: '100px',
+          marginTop: '100px'
+        });
+      });
+      $('.jquery-reset').click(function () {
+        $('.jquery-transparent').css({ opacity: 1 });
+        $('.jquery-scale').css({ width: '100px', height: '100px' });
+        $('.jquery-translate').animate({
+          marginLeft: '0px',
+          marginTop: '0px'
+        });
+      })
+    });
+  </script>
 </body>
 
 </html>
