@@ -1,0 +1,185 @@
+.container {
+  background: url("img/bg.jpg");
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.title {
+  color: #2d509b;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 65px;
+  position: relative;
+}
+
+.title::after {
+  background: url("img/title.png");
+  content: "";
+  height: 211px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1000px;
+}
+
+.circle-chart {
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+
+.circle-patients {
+  background: #f2d5b7;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  height: 316px;
+  position: relative;
+  width: 316px;
+}
+
+.circle-patients::after {
+  content: "12";
+  right: 75px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.circle-kras {
+  background: #dd7628;
+  border-radius: 50%;
+  font-size: 63px;
+  height: 203px;
+  line-height: 203px;
+  left: 10px;
+  position: absolute;
+  top: 25px;
+  text-align: center;
+  width: 203px;
+}
+
+.circle-nras {
+  background: #deb682;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 141px;
+  line-height: 141px;
+  right: 15px;
+  position: absolute;
+  top: 40px;
+  text-align: center;
+  width: 141px;
+}
+
+.bar-chart {
+  margin-left: 70px;
+  width: 475px;
+}
+
+.bar {
+  align-items: center;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.bar__title {
+  color: #d0691c;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  padding-right: 20px;
+  width: 100px;
+}
+
+.bar__title-patients {
+  font-size: 24px;
+}
+
+.progress__bar {
+  height: 17px;
+  width: 355px;
+  padding: 12px 0;
+}
+
+.progress__track {
+  position: relative;
+  width: 100%;
+  height: 17px;
+  background: #d4dced;
+}
+
+.progress__track::after {
+  background: url("img/bullits.png");
+  content: "";
+  height: 17px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 355px;
+}
+
+.progress__fill {
+  height: 17px;
+}
+
+.progress__fill-patients {
+  background: #f2d5b7;
+  width: 100%;
+}
+
+.progress__fill-kras {
+  background: #dd7628;
+  width: 50%;
+}
+
+.progress__fill-nras {
+  background: #deb682;
+  width: 25%;
+}
+
+.progress__value::before {
+  color: #d0691c;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  position: absolute;
+  top: -40px;
+}
+
+.progress__value-patients::before {
+  content: "12";
+  right: 20px;
+}
+
+.progress__value-kras::before {
+  content: "6";
+  left: 165px;
+}
+
+.progress__value-nras::before {
+  content: "3";
+  left: 85px;
+}
+
+.progress__value::after {
+  content: "";
+  height: 38px;
+  position: absolute;
+  top: -7px;
+  width: 53px;
+}
+
+.progress__value-patients::after {
+  background: url("img/marker_patients.png");
+  right: -2px;
+}
+
+.progress__value-kras::after {
+  background: url("img/marker_kras.png");
+  left: 150px;
+}
+
+.progress__value-nras::after {
+  background: url("img/marker_nras.png");
+  left: 70px;
+}

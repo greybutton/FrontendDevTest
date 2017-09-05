@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">
+      Скольким своим пациентам в течение последнего месяца <br> Вы поставили диагноз мКРР?
+    </h1>
+    <div class="circle-chart">
+      <div class="circle-patients">
+        <div class="circle-kras">6</div>
+        <div class="circle-nras">3</div>
+      </div>
+    </div>
+    <div class="bar-chart">
+      <div class="bar">
+        <div class="bar__title bar__title-patients">Число пациентов</div>
+        <div class="progress__bar">
+          <div class="progress__track">
+            <div class="progress__fill progress__fill-patients">
+              <span class="progress__value progress__value-patients"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="bar__title">KRAS</div>
+        <div class="progress__bar">
+          <div class="progress__track">
+            <div class="progress__fill progress__fill-kras">
+              <span class="progress__value progress__value-kras"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="bar__title">NRAS</div>
+        <div class="progress__bar">
+          <div class="progress__track">
+            <div class="progress__fill progress__fill-nras">
+              <span class="progress__value progress__value-nras"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
