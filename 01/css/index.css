@@ -1,5 +1,5 @@
 .container {
-  background: url("img/bg.jpg");
+  background: url("../img/bg.jpg");
   margin: 0 auto;
   width: 1024px;
 }
@@ -15,7 +15,7 @@
 }
 
 .title::after {
-  background: url("img/title.png");
+  background: url("../img/title.png");
   content: "";
   height: 211px;
   left: 0;
@@ -110,7 +110,7 @@
 }
 
 .progress__track::after {
-  background: url("img/bullits.png");
+  background: url("../img/bullits.png");
   content: "";
   height: 17px;
   left: 0;
@@ -170,16 +170,16 @@
 }
 
 .progress__value-patients::after {
-  background: url("img/marker_patients.png");
+  background: url("../img/marker_patients.png");
   right: -2px;
 }
 
 .progress__value-kras::after {
-  background: url("img/marker_kras.png");
+  background: url("../img/marker_kras.png");
   left: 150px;
 }
 
 .progress__value-nras::after {
-  background: url("img/marker_nras.png");
+  background: url("../img/marker_nras.png");
   left: 70px;
 }
