@@ -1,39 +1,51 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title></title>
-    <link href="css/main.css" rel="stylesheet">
-    <style type="text/css">
-        
-	#slide-index-background {
-		 left: 0px;
-		 top: 0px;
-		 position: relative;
-		 margin: 0 auto;
-		 overflow: hidden;
-		 z-index: 0;
-		 width:1024px;
-		 height:768px;
-	}
 
-    </style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title></title>
+  <link href="css/main.css" rel="stylesheet">
+  <style type="text/css">
+    #slide-index-background {
+      left: 0px;
+      top: 0px;
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+      z-index: 0;
+      width: 1024px;
+      height: 768px;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="slide-index-background">
-        <canvas id='screen' width='1024' height='768'></canvas>
-    </div>  
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script>
-        $(function () {
-           
-        });
-    </script>
+  <div id="slide-index-background">
+    <canvas id='screen' width='1024' height='768'></canvas>
+  </div>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script>
+    $(function () {
+      var canvas = document.getElementById("screen");
+      var ctx = canvas.getContext('2d');
+      ctx.strokeStyle = 'black';
+      ctx.strokeRect(20, 20, 200, 50);
+      ctx.font = '30px sans-serif';
+      ctx.fillText('Hello world', 45, 55);
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = 'red';
+      ctx.moveTo(10, 10);
+      ctx.lineTo(250, 70);
+      ctx.stroke();
+    });
+  </script>
 </body>
+
 </html>
