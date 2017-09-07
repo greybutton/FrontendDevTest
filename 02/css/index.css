@@ -11,12 +11,16 @@ div {
 
 .css,
 .jquery {
-  display: inline-block;
-  margin: 50px;
+  position: absolute;
+  top: 50px;
+}
+
+.css {
+  left: 50px;
 }
 
 .jquery {
-  position: relative;
+  left: 400px;
 }
 
 .transparent {
@@ -44,19 +48,19 @@ div {
 }
 
 .css-transparent.animation {
-  animation: transparent 3s;
+  animation: transparent 3s forwards;
 }
 
 .css-rotate.animation {
-  animation: rotate 3s;
+  animation: rotate 3s forwards;
 }
 
 .css-scale.animation {
-  animation: scale 3s;
+  animation: scale 3s forwards;
 }
 
 .css-translate.animation {
-  animation: translate 3s;
+  animation: translate 3s forwards;
 }
 
 @keyframes transparent {
