@@ -34,9 +34,8 @@
       height: 53px;
       z-index: 3;
     }
-    /* .Layer4, */
 
-    .ui-slider-horizontal .ui-slider-handle {
+    .Layer4 {
       background-size: 100% 100%;
       position: absolute;
       top: 0px;
@@ -199,12 +198,19 @@
   <script src="js/hammer.js"></script>
   <script>
     $(function () {
-      $('#slider').slider()
-      $('.parentSlider').slider({
-        slide: function (event, ui) {
-          $('.textFooter').html(ui.value);
-          var number = Math.floor(ui.value / 10);
-          for (var i = 0; i <= 10; i += 1) {
+      var textFooter = $('.textFooter');
+      var maxValue = 100;
+      var sliderWidth = $('.parentSlider').width() - $('.Layer4').width();
+      $('.Layer4').draggable({
+        axis: 'x',
+        containment: '.parentSlider',
+        drag: function (event, ui) {
+          var position = ui.position.left;
+          var percentFill = countPercent(position, sliderWidth);
+          var value = countValue(percentFill, maxValue);
+          textFooter.html(value);
+          var number = countNumber(percentFill);
+          for (var i = 1; i <= 10; i += 1) {
             if (i <= number) {
               $('.p' + i).css({ display: 'block' });
             } else {
@@ -213,6 +219,15 @@
           }
         }
       });
+      function countPercent(position, sliderWidth) {
+        return 100 / sliderWidth * position;
+      }
+      function countValue(percentFill, maxValue) {
+        return Math.round(maxValue / 100 * percentFill);
+      };
+      function countNumber(percentFill) {
+        return Math.round(0.1 * percentFill);
+      };
     });
   </script>
 </body>
