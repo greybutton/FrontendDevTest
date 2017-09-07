@@ -22,13 +22,11 @@
         containment: '.drag_red_wrapper',
         drag: function (event, ui) {
           $('.yellow').each(function (index, el) {
-            var yellowOffsetTop = $('.yellow')[index].offsetTop;
-            var redOffsetTop = ui.position.top + redHeight;
-            if (redOffsetTop > yellowOffsetTop) {
+            if ((ui.position.top + redHeight) > el.offsetTop) {
               el.style.backgroundImage = 'url("images/refract/man_red.png")';
             }
-            if (redOffsetTop - humanHeight > yellowOffsetTop ||
-              redOffsetTop + humanHeight < yellowOffsetTop) {
+            if ((ui.position.top + redHeight - humanHeight) > el.offsetTop ||
+              (ui.position.top + redHeight + humanHeight) < el.offsetTop) {
               el.style.backgroundImage = 'url("images/refract/man_white.png")';
             }
           })
